@@ -18,4 +18,7 @@
 
         </div>
     </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <h1>Barev</h1>
+    </div>
 @endsection

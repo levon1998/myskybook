@@ -12,3 +12,21 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+
+/**
+ * Admin Url For not authenticated users
+ */
+Route::prefix('v1-admin')->group(function () {
+    Route::get('login', "AdminAuthController@login");
+    Route::post('login', "AdminAuthController@authUser");
+});
+
+/**
+ * Admin Url For authenticated users
+ */
+Route::prefix('v1-admin')->group(function () {
+    Route::get('/', "AdminDashboardController@index");
+});
+
+

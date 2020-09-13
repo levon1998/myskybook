@@ -19,6 +19,37 @@
         </div>
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
-        <h1>Barev</h1>
+        <ul>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+            <li>
+                test 1
+            </li>
+        </ul>
     </div>
 @endsection

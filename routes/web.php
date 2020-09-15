@@ -27,6 +27,10 @@ Route::prefix('v1-admin')->group(function () {
  */
 Route::prefix('v1-admin')->group(function () {
     Route::get('/', "AdminDashboardController@index");
+    Route::get('/users', "AdminUserController@index");
+    Route::get('/donates', "AdminDonateController@index");
+    Route::get('/plans', "AdminPlanController@index");
+    Route::get('/reports', "AdminReportController@index");
 });
 
 

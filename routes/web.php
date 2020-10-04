@@ -14,6 +14,8 @@
 Route::get('/', 'HomeController@index');
 
 
+Auth::routes(['verify' => true]);
+
 /**
  * Admin Url For not authenticated users
  */

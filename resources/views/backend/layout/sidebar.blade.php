@@ -25,7 +25,7 @@
                 <a href="/v1-admin/users"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label">Users</span></a>
             </li>
             <li>
-                <a href="/v1-admin/donates"><i class="fa fa-question" aria-hidden="true"></i> <span class="nav-label">Donates</span></a>
+                <a href="/v1-admin/donates"><i class="fa fa-money" aria-hidden="true"></i> <span class="nav-label">Donates</span></a>
             </li>
             <li>
                 <a href="/v1-admin/plans"><i class="fa fa-question" aria-hidden="true"></i> <span class="nav-label">Plans</span></a>

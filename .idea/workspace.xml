@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40eb22b-3efe-456c-a92f-fe8beee3abaf" name="Default" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/public/frontend/js/auth.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/frontend/partials/confirmEmail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -35,6 +36,13 @@
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layout/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layout/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminDashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Plan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Plan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layout/sidebar.blade.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -566,12 +574,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\myskybooks\resources\views\frontend\layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\myskybook\public\backend" />
       <recent name="C:\xampp\htdocs\myskybooks\public\frontend" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\myskybooks\resources\views\frontend\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -600,11 +608,24 @@
       <workItem from="1599947029642" duration="2110000" />
       <workItem from="1599985807524" duration="2081000" />
       <workItem from="1600002720488" duration="592000" />
+<<<<<<< Updated upstream
       <workItem from="1600206025879" duration="396000" />
       <workItem from="1601052664622" duration="3713000" />
       <workItem from="1601155033113" duration="1702000" />
       <workItem from="1601239519587" duration="1497000" />
       <workItem from="1601308695396" duration="9505000" />
+=======
+      <workItem from="1600062842953" duration="652000" />
+      <workItem from="1600157230139" duration="14023000" />
+      <workItem from="1600185860879" duration="2057000" />
+      <workItem from="1600233142199" duration="3098000" />
+      <workItem from="1600440281368" duration="659000" />
+      <workItem from="1600747383519" duration="328000" />
+      <workItem from="1601154697926" duration="1383000" />
+      <workItem from="1601359071769" duration="15000" />
+      <workItem from="1602068908950" duration="99000" />
+      <workItem from="1602071510384" duration="1369000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -657,6 +678,7 @@
         </entry>
       </map>
     </option>
+<<<<<<< Updated upstream
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1019,5 +1041,30 @@
         </state>
       </provider>
     </entry>
+=======
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600186738169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="232" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600186738169" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602069006680">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602069006680" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1600159056614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600159056614" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1600234714565">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600234714565" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600187269104">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600187269104" />
+>>>>>>> Stashed changes
   </component>
 </project>

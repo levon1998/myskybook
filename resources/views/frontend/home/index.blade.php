@@ -7,6 +7,7 @@
 @section('content')
     <div class="container">
         <div class="row">
+            @if (!Auth::check())
             <div class="col-sm-12 col-xs-12 col-md-4 col-lg-3">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -21,13 +22,16 @@
                         <form action="{{ route('login') }}" method="post">
                             <div class="login-form text-center">
                                 <div class="row">
+                                    {{ csrf_field() }}
                                     <div class="col-12 mb--20">
-                                        <input class="mb-0 form-control" name="email" type="email" id="loginEmail"
+                                        <input class="mb-0 form-control" name="email" type="text" id="loginEmail"
                                                placeholder="Email or Username Here..">
+                                        {!! $errors->first('email', '<small class="text-danger">:message</small>') !!}
                                     </div>
                                     <div class="col-12 mb--20">
                                         <input class="mb-0 form-control" name="password" type="password"
                                                id="loginPassword" placeholder="Password">
+                                        {!! $errors->first('password', '<small class="text-danger">:message</small>') !!}
                                     </div>
                                     <div class="col-12">
                                         <div class="row col-12">
@@ -36,7 +40,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12 pb-3" style="border-bottom: 1px solid #62ab00">
-                                        <a href="#" class="btn btn-outlined">Sign In</a>
+                                        <button type="submit" class="btn btn-outlined">Sign In</button>
                                     </div>
 
                                     <div class="col-12 mb--20">
@@ -87,7 +91,9 @@
                                                id="form-error-password_confirmation"></small>
                                     </div>
                                     <div class="col-md-12">
-                                        <button class="btn btn-outlined register">Sign up</button>
+                                        <button class="btn btn-outlined register">
+                                            Sign up
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -95,7 +101,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-xs-12 col-md-8 col-lg-9">
+            @endif
+            <div class="col-sm-12 col-xs-12 col-md-8 col-lg-{{!Auth::check() ? '9' : '12'}}">
                 <section class="hero-area hero-slider-1">
                     <div class="sb-slick-slider" data-slick-setting='{
                                     "autoplay": true,

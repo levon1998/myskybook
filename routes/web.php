@@ -27,7 +27,7 @@ Route::prefix('v1-admin')->group(function () {
 /**
  * Admin Url For authenticated users
  */
-Route::prefix('v1-admin')->group(function () {
+Route::prefix('v1-admin')->middleware('checkAdmin')->group(function () {
     Route::get('/', "AdminDashboardController@index");
     Route::get('/users', "AdminUserController@index");
     Route::get('/donates', "AdminDonateController@index");

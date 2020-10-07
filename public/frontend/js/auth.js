@@ -1,6 +1,9 @@
 $(document).ready(function () {
     $('.register').on('click', function (e) {
         e.preventDefault();
+        var self = $(this);
+        self.prop('disabled', true);
+        self.html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>');
 
         $.ajax({
             type: 'POST',
@@ -15,6 +18,9 @@ $(document).ready(function () {
                 $.each(err.errors, function (key, item) {
                     $('#form-error-'+key).text(item[0])
                 })
+
+                self.prop('disabled', false);
+                self.html('Sign up');
             }
         });
 

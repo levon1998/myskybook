@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 Auth::routes(['verify' => true]);
@@ -35,4 +35,10 @@ Route::prefix('v1-admin')->middleware('checkAdmin')->group(function () {
     Route::get('/reports', "AdminReportController@index");
 });
 
+Route::middleware('auth')->group(function () {
+   Route::get('/my-account', 'UserAccountController@index')->name('my-account');
+   Route::get('/settings', 'UserAccountController@settings')->name('settings');
+   Route::get('/watch-later', 'UserAccountController@watchLater')->name('watch-later');
+   Route::get('/likes', 'UserAccountController@likes')->name('likes');
+});
 

@@ -64,6 +64,11 @@
                             </li>
                             <li class="menu-item">
                                 <a href="javascript:void(0)">
+                                    Price
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="javascript:void(0)">
                                     Contact
                                 </a>
                             </li>
@@ -168,6 +173,11 @@
                         </li>
                         <li class="menu-item">
                             <a href="javascript:void(0)">
+                                Price
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
                                 Contact
                             </a>
                         </li>
@@ -221,6 +231,11 @@
                         <li class="menu-item">
                             <a href="javascript:void(0)">
                                 About
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                Price
                             </a>
                         </li>
                         <li class="menu-item">

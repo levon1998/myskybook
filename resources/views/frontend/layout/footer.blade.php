@@ -1,3 +1,4 @@
+<hr><br>
 <footer class="site-footer">
     <div class="container">
         <div class="row justify-content-between  section-padding">

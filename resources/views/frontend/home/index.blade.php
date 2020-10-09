@@ -116,7 +116,7 @@
                             <div class="container">
                                 <div class="home-content text-center text-sm-left position-relative">
                                     <div class="hero-partial-image image-right">
-                                        <img src="image/bg-images/home-slider-2-ai.png" alt="">
+                                        <img src="{{ asset('/frontend/image/bg-images/home-slider-2-ai.png') }}" alt="">
                                     </div>
                                     <div class="row no-gutters ">
                                         <div class="col-xl-6 col-md-6 col-sm-7">
@@ -138,7 +138,7 @@
                             <div class="container">
                                 <div class="home-content text-center text-sm-left position-relative">
                                     <div class="hero-partial-image image-right">
-                                        <img src="image/bg-images/home-slider-2-ai.png" alt="">
+                                        <img src="{{ asset('/frontend/image/bg-images/home-slider-2-ai.png') }}" alt="">
                                     </div>
                                     <div class="row no-gutters ">
                                         <div class="col-xl-6 col-md-6 col-sm-7">
@@ -218,12 +218,12 @@
             <div class="row space-db--30">
                 <div class="col-lg-6 col-md-6 mb--30">
                     <a href="" class="promo-image promo-overlay">
-                        <img src="image/bg-images/promo-banner-with-text.jpg" alt="">
+                        <img src="{{ asset('/frontend/image/bg-images/promo-banner-with-text.jpg') }}" alt="">
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 mb--30">
                     <a href="" class="promo-image promo-overlay">
-                        <img src="image/bg-images/promo-banner-with-text-2.jpg" alt="">
+                        <img src="{{ asset('/frontend/image/bg-images/promo-banner-with-text-2.jpg') }}" alt="">
                     </a>
                 </div>
             </div>
@@ -283,10 +283,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-1.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-1.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -324,10 +324,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-2.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-3.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -365,10 +365,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-3.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-2.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -406,10 +406,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-4.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-5.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -447,10 +447,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-5.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-4.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -488,10 +488,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-6.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-6.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-7.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-7.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -529,10 +529,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-7.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-7.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-6.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-6.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -570,10 +570,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-8.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-9.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -611,10 +611,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-9.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-8.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -652,10 +652,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-10.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-10.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-11.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -693,10 +693,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-11.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-10.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-10.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -734,10 +734,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-12.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-12.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-11.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -791,10 +791,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-3.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-1.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -832,10 +832,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-2.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-3.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -873,10 +873,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-1.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-2.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -914,10 +914,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-4.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-5.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -955,10 +955,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-7.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-7.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-4.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -996,10 +996,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-6.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-6.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-7.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-7.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1037,10 +1037,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-5.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-6.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-6.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1078,10 +1078,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-8.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-9.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1119,10 +1119,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-3.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-8.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1160,10 +1160,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-9.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-11.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1201,10 +1201,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-10.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-10.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-10.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-10.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1242,10 +1242,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-9.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-11.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1299,10 +1299,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-1.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-1.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1340,10 +1340,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-4.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-3.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1381,10 +1381,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-3.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-2.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1422,10 +1422,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-1.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-5.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1463,10 +1463,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-11.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-4.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1504,10 +1504,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-10.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-10.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-7.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-7.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1545,10 +1545,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-9.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-6.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-6.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1586,10 +1586,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-8.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-9.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-9.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1627,10 +1627,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-5.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-8.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1668,10 +1668,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-3.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-11.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1709,10 +1709,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-11.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-10.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-10.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1751,10 +1751,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-12.jpg" alt="">
+                                            <img src="{{ asset('/frontend/image/products/product-12.jpg') }}" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-11.jpg" alt="">
+                                                    <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                     <a href="cart.html" class="single-btn">
@@ -1817,10 +1817,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-2.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-1.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">
@@ -1860,10 +1860,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-1.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-1.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-1.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">
@@ -1903,10 +1903,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-3.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-3.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-2.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-2.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">
@@ -1947,10 +1947,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-5.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-5.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-4.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">
@@ -1990,10 +1990,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-6.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-6.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-4.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-4.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">
@@ -2034,10 +2034,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-8.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-8.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-7.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-7.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">
@@ -2078,10 +2078,10 @@
                         </div>
                         <div class="product-card--body">
                             <div class="card-image">
-                                <img src="image/products/product-13.jpg" alt="">
+                                <img src="{{ asset('/frontend/image/products/product-13.jpg') }}" alt="">
                                 <div class="hover-contents">
                                     <a href="product-details.html" class="hover-image">
-                                        <img src="image/products/product-11.jpg" alt="">
+                                        <img src="{{ asset('/frontend/image/products/product-11.jpg') }}" alt="">
                                     </a>
                                     <div class="hover-btns">
                                         <a href="cart.html" class="single-btn">

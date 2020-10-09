@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
 
 
 Auth::routes(['verify' => true]);

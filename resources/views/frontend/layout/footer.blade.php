@@ -5,7 +5,7 @@
             <div class=" col-xl-3 col-lg-4 col-sm-6">
                 <div class="single-footer pb--40">
                     <div class="brand-footer footer-title">
-                        <img src="image/logo--footer.png" alt="">
+                        <img src="{{ asset('/frontend/image/logo.png') }}" alt="">
                     </div>
                     <div class="footer-contact">
                         <p><span class="label">Address:</span><span class="text">Example Street 98, HH2 BacHa, New
@@ -49,22 +49,25 @@
                     <h3>Newsletter Subscribe</h3>
                 </div>
                 <div class="newsletter-form mb--30">
-                    <form action="./php/mail.php">
-                        <input type="email" class="form-control" placeholder="Enter Your Email Address Here...">
-                        <button class="btn btn--primary w-100">Subscribe</button>
+                    <form id="subscribeForm">
+                        {{ csrf_field() }}
+                        <input type="email" name="subscribeEmail" id="subscribeEmail" class="form-control" placeholder="Enter Your Email Address Here...">
+                        <button id="subscribe" class="btn btn--primary w-100">Subscribe</button>
                     </form>
                 </div>
-                <div class="social-block">
-                    <h3 class="title">STAY CONNECTED</h3>
-                    <ul class="social-list list-inline">
-                        <li class="single-social facebook"><a href=""><i class="ion ion-social-facebook"></i></a>
-                        </li>
-                        <li class="single-social twitter"><a href=""><i class="ion ion-social-twitter"></i></a></li>
-                        <li class="single-social google"><a href=""><i
-                                        class="ion ion-social-googleplus-outline"></i></a></li>
-                        <li class="single-social youtube"><a href=""><i class="ion ion-social-youtube"></i></a></li>
-                    </ul>
-                </div>
+                @if (false)
+                    <div class="social-block">
+                        <h3 class="title">STAY CONNECTED</h3>
+                        <ul class="social-list list-inline">
+                            <li class="single-social facebook"><a href=""><i class="ion ion-social-facebook"></i></a>
+                            </li>
+                            <li class="single-social twitter"><a href=""><i class="ion ion-social-twitter"></i></a></li>
+                            <li class="single-social google"><a href=""><i
+                                            class="ion ion-social-googleplus-outline"></i></a></li>
+                            <li class="single-social youtube"><a href=""><i class="ion ion-social-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -74,7 +77,7 @@
                 vel
                 magna volutpat, posuere eros</p>
             <a href="#" class="payment-block">
-                <img src="image/icon/payment.png" alt="">
+                <img src="{{ asset('/frontend/image/icon/payment.png') }}" alt="">
             </a>
             <p class="copyright-text">Copyright © 2019 <a href="#" class="author">Pustok</a>. All Right Reserved.
                 <br>

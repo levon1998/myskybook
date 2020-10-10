@@ -1,7 +1,7 @@
 @extends('frontend.layout.app')
 
 @section('title')
-    My Account
+    Favorite list
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('my-account') }}">My Account</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Favorite List</li>
                     </ol>
                 </nav>
             </div>
@@ -27,13 +27,13 @@
                 <div class="col-12">
                     <div class="row">
 
-                        @include('frontend.partials.accountMenu', ['active' => 'my-account'])
+                        @include('frontend.partials.accountMenu', ['active' => 'favorites'])
 
                         <div class="col-lg-9 col-12 mt--30 mt-lg--0">
                             <div class="tab-content" id="myaccountContent">
                                 <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Account Settings</h3>
+                                        <h3>Dashboard</h3>
                                         <div class="welcome mb-20">
                                             <p>Hello, <strong>Alex Tuntuni</strong> (If Not <strong>Tuntuni
                                                     !</strong><a href="login-register.html" class="logout">

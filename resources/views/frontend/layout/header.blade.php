@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3">
-                    <a href="index.html" class="site-brand">
+                    <a href="{{ route('home') }}" class="site-brand">
                         <img src="{{ asset('/frontend/image/logo.png') }}" alt="">
                     </a>
                 </div>
@@ -64,29 +64,10 @@
                             </li>
                             <li class="menu-item">
                                 <a href="javascript:void(0)">
-                                    Contact
+                                    Price
                                 </a>
                             </li>
-                            @if (Auth::check())
-                                <li class="menu-item has-children">
-                                    <a href="#">My Account <i class="fas fa-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">My Account</a></li>
-                                        <li><a href="#">Order History</a></li>
-                                        <li>
-                                            <a href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                                Logout
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                {{ csrf_field() }}
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            @endif
+                            @include('frontend.partials.headerAccountMenu')
                         </ul>
                     </div>
                 </div>
@@ -99,7 +80,7 @@
         <div class="container">
             <div class="row align-items-sm-end align-items-center">
                 <div class="col-md-4 col-7">
-                    <a href="index.html" class="site-brand">
+                    <a href="{{ route('home') }}" class="site-brand">
                         <img src="{{ asset('/frontend/image/logo.png') }}" alt="">
                     </a>
                 </div>
@@ -168,7 +149,7 @@
                         </li>
                         <li class="menu-item">
                             <a href="javascript:void(0)">
-                                Contact
+                                Price
                             </a>
                         </li>
                     </ul>
@@ -176,14 +157,7 @@
             </div>
             <nav class="off-canvas-nav">
                 <ul class="mobile-menu menu-block-2">
-                    <li class="menu-item-has-children">
-                        <a href="#">My Account <i class="fas fa-angle-down"></i></a>
-                        <ul class="sub-menu">
-                            <li><a href="">My Account</a></li>
-                            <li><a href="">Order History</a></li>
-                            <li><a href="">Transactions</a></li>
-                        </ul>
-                    </li>
+                    @include('frontend.partials.headerAccountMenu')
                 </ul>
             </nav>
             <div class="off-canvas-bottom">
@@ -206,7 +180,7 @@
     <div class="container d-none d-lg-block">
         <div class="row align-items-center">
             <div class="col-lg-4">
-                <a href="index.html" class="site-brand">
+                <a href="{{ route('home') }}" class="site-brand">
                     <img src="{{ asset('/frontend/image/logo.png') }}" alt="">
                 </a>
             </div>
@@ -225,9 +199,11 @@
                         </li>
                         <li class="menu-item">
                             <a href="javascript:void(0)">
-                                Contact
+                                Price
                             </a>
                         </li>
+
+                        @include('frontend.partials.headerAccountMenu')
                     </ul>
                 </div>
             </div>

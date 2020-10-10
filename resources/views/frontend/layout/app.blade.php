@@ -7,8 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/plugins.css') }}" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/toastr.min.css') }}" />
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/main.css') }}" />
-        <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/image/favicon.ico') }}">
+        @yield('styles')
     </head>
 
     <body>
@@ -21,6 +23,7 @@
 
         <script src="{{ asset('/frontend/js/plugins.js') }}"></script>
         <script src="{{ asset('/frontend/js/ajax-mail.js') }}"></script>
+        <script src="{{ asset('/frontend/js/toastr.min.js') }}"></script>
         <script src="{{ asset('/frontend/js/custom.js') }}"></script>
         @yield('scripts')
     </body>

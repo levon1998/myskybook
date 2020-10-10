@@ -449,7 +449,7 @@ jQuery(document).ready(function ($) {
                "positionClass": "toast-top-center",
                "preventDuplicates": true,
            }
-           toastr.info('Email field is required.')
+           toastr.warning('Email field is required.')
        } else {
            var self = $(this);
            self.prop('disabled', true);
@@ -470,7 +470,7 @@ jQuery(document).ready(function ($) {
                        "positionClass": "toast-top-center",
                        "preventDuplicates": true,
                    }
-                   toastr.info('Thank you.');
+                   toastr.success('Thank you.');
                },
                error: function (xhr) {
                    toastr.options = {
@@ -480,7 +480,7 @@ jQuery(document).ready(function ($) {
                        "progressBar": true,
                        "positionClass": "toast-top-center",
                    };
-                   toastr.info('Email address is already exists.');
+                   toastr.error('Email address is already exists.');
                }
            });
 

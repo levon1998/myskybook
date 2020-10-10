@@ -37,9 +37,13 @@ Route::prefix('v1-admin')->middleware('checkAdmin')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-   Route::get('/my-account', 'UserAccountController@index')->name('my-account');
-   Route::get('/settings', 'UserAccountController@settings')->name('settings');
-   Route::get('/watch-later', 'UserAccountController@watchLater')->name('watch-later');
-   Route::get('/likes', 'UserAccountController@likes')->name('likes');
+    Route::get('/my-account', 'UserAccountController@index')->name('my-account');
+    Route::get('/settings', 'UserAccountController@settings')->name('settings');
+    Route::get('/watch-later', 'UserAccountController@watchLater')->name('watch-later');
+    Route::get('/favorites', 'UserAccountController@favorites')->name('favorites');
+
+    // Account Settings
+    Route::post('/account-save-changes', 'UserAccountController@accountSaveChanges')->name('account-save-changes');
+    Route::post('/account-save-password', 'UserAccountController@accountSavePassword')->name('account-save-password');
 });
 

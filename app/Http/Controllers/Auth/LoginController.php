@@ -90,10 +90,6 @@ class LoginController extends Controller
             return redirect()->intended($this->redirectPath());
         }
 
-        return redirect()->back()
-            ->withInput()
-            ->withErrors([
-                'login' => 'These credentials do not match our records.',
-            ]);
+        return redirect()->back()->with('login', true);
     }
 }

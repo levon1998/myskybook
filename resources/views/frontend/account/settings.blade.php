@@ -43,14 +43,17 @@
                                                     <div class="col-md-6 col-12 mb--20">
                                                         <label>Full Name</label>
                                                         <input type="text" value="{{ Auth::user()->name }}" name="name" placeholder="Full Name">
+                                                        {!! $errors->first('name', '<small class="text-danger">:message</small>') !!}
                                                     </div>
                                                     <div class="col-md-6 col-12 mb--20">
                                                         <label>Username</label>
                                                         <input type="text" value="{{ Auth::user()->username }}" name="username" placeholder="Username">
+                                                        {!! $errors->first('username', '<small class="text-danger">:message</small>') !!}
                                                     </div>
                                                     <div class="col-md-12 mb--20">
                                                         <label>Email Address*</label>
                                                         <input type="email" value="{{ Auth::user()->email }}" disabled placeholder="Email Address">
+                                                        {!! $errors->first('email', '<small class="text-danger">:message</small>') !!}
                                                     </div>
                                                     <div class="col-12 text-right">
                                                         <button class="btn btn-outlined--primary" type="submit">Save</button>
@@ -66,6 +69,7 @@
                                                     <div class="col-md-12 mb--20">
                                                         <label>Password</label>
                                                         <input type="password" name="password" placeholder="Password">
+                                                        {!! $errors->first('password', '<small class="text-danger">:message</small>') !!}
                                                     </div>
                                                     <div class="col-md-12 mb--20">
                                                         <label>Confirm Password</label>

@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/plugins.css') }}" />
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/toastr.min.css') }}" />
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/main.css') }}" />
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/image/favicon.ico') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
         @yield('styles')
     </head>
 

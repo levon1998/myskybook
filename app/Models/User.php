@@ -10,6 +10,9 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
+    const ADMIN = 1;
+    const USER = 2;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -37,6 +40,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    const ADMIN = 1;
-    const USER = 2;
+    public function likes()
+    {
+        return $this->hasMany(UserLikeBook::class);
+    }
 }

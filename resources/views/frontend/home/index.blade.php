@@ -2103,7 +2103,7 @@
 
 
         var loginError = "{{ session('login') }}";
-        console.log(loginError);
+
         $(document).ready(function () {
             if (loginError === "1") {
                 toastr.options = {

@@ -23,6 +23,23 @@ Auth::routes(['verify' => true]);
 Route::prefix('v1-admin')->group(function () {
     Route::get('login', "AdminAuthController@login");
     Route::post('login', "AdminAuthController@authUser");
+
+    // Tags
+    Route::get('/tags', "AdminTagController@index");
+    Route::get('/tags/create', "AdminTagController@create");
+    Route::post('/tags/store', "AdminTagController@store");
+    Route::get('/tags/edit/{id}', "AdminTagController@edit");
+    Route::post('/tags/update', "AdminTagController@update");
+    Route::get('/tags/delete/{id}', "AdminTagController@delete");
+
+    // Categories
+    Route::get('/categories', "AdminCategoryController@index");
+    Route::get('/categories/create', "AdminCategoryController@create");
+    Route::post('/categories/store', "AdminCategoryController@store");
+    Route::get('/categories/edit/{id}', "AdminCategoryController@edit");
+    Route::post('/categories/update', "AdminCategoryController@update");
+    Route::get('/categories/delete/{id}', "AdminCategoryController@delete");
+
 });
 
 /**

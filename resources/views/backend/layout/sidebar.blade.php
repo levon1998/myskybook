@@ -4,23 +4,24 @@
             <li class="nav-header">
                 <div class="dropdown profile-element">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="mailbox.html">Mailbox</a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html">Logout</a></li>
-                    </ul>
-                </div>
-                <div class="logo-element">
-                    IN+
+                        <span class="clear">
+                            <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong></span>
+                        </span>
+                    </a>
                 </div>
             </li>
-            <li>
-                <a href="/"><i class="fa fa-diamond"></i> <span class="nav-label">Dashboard</span></a>
+            <li class="{{ (request()->is('v1-admin')) ? 'active' : '' }}">
+                <a href="{{ url('/v1-admin/') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Dashboard</span></a>
             </li>
+
+            <li class="{{ (request()->is('v1-admin/tags') || request()->is('v1-admin/tags/*')) ? 'active' : '' }}">
+                <a href="{{ url('/v1-admin/tags') }}"><i class="fa fa-tags"></i> <span class="nav-label">Tags</span></a>
+            </li>
+
+            <li class="{{ (request()->is('v1-admin/categories') || request()->is('v1-admin/categories/*')) ? 'active' : '' }}">
+                <a href="{{ url('/v1-admin/categories') }}"><i class="fa fa-tags"></i> <span class="nav-label">Categories</span></a>
+            </li>
+
             <li>
                 <a href="/v1-admin/users"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label">Users</span></a>
             </li>

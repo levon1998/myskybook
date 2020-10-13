@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserLikeBook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -27,6 +28,8 @@ class UserAccountController extends Controller
 
     public function favorites()
     {
+        $likes = UserLikeBook::where('user_id', Auth::id())->with('book')->get();
+        dd($likes);
         return view('frontend.account.favorites');
     }
 

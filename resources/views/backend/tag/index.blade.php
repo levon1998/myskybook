@@ -46,7 +46,7 @@
                             <td>{{ $tag->created_at }}</td>
                             <td>
                                 <a href="{{ url('/v1-admin/tags/edit/'.$tag->id) }}" class="btn btn-sm btn-default"><i class="fa fa-pencil"></i></a>
-                                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                <a href="{{ url('/v1-admin/tags/delete/'.$tag->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     @empty
@@ -59,4 +59,28 @@
 
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+
+        var success = "{{ session('success') }}";
+
+        $(document).ready(function () {
+            toastr.options = {
+                "progressBar": true,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": true,
+            };
+
+            if (success === "1") {
+                toastr.success('Success.');
+            } else if (success === "2") {
+                toastr.error('Record not found.');
+            }
+        });
+
+        var registerUrl = "{{ route('register') }}";
+    </script>
+    <script src="{{ asset('/frontend/js/auth.js') }}"></script>
 @endsection

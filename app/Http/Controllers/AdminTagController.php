@@ -36,7 +36,7 @@ class AdminTagController extends Controller
             'slug' => $slug
         ]);
 
-        return redirect()->to('/v1-admin/tags')->with('success', true);
+        return redirect()->to('/v1-admin/tags')->with('success', '1');
     }
 
     public function edit($id)
@@ -62,11 +62,17 @@ class AdminTagController extends Controller
             'slug' => $slug
         ]);
 
-        return redirect()->to('/v1-admin/tags')->with('success', true);
+        return redirect()->to('/v1-admin/tags')->with('success', '1');
     }
 
-    public function delete(Request $request)
+    public function delete($id)
     {
+        if (!Tag::where('id', $id)->exists()) {
+            return redirect()->to('/v1-admin/tags')->with('success', '2');
+        }
+        Tag::where('id', $id)->delete();
+
+        return redirect()->to('/v1-admin/tags')->with('success', '1');
 
     }
 }

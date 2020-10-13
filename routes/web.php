@@ -30,7 +30,7 @@ Route::prefix('v1-admin')->group(function () {
     Route::post('/tags/store', "AdminTagController@store");
     Route::get('/tags/edit/{id}', "AdminTagController@edit");
     Route::post('/tags/update', "AdminTagController@update");
-    Route::post('/tags/delete', "AdminTagController@delete");
+    Route::get('/tags/delete/{id}', "AdminTagController@delete");
 
 });
 

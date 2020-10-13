@@ -28,7 +28,7 @@ class AdminTagController extends Controller
             'name' => 'required|max:30'
         ]);
 
-        $slugService = new GenerateSlug(new Tag);
+        $slugService = new GenerateSlug(new Tag, $validatedData['id']);
         $slug = $slugService->generate($request->input('name'));
 
         Tag::create([

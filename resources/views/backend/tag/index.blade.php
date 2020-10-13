@@ -51,7 +51,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="4"> Not Data available.</td>
+                            <td colspan="5"> Not Data available.</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -63,7 +63,6 @@
 
 @section('scripts')
     <script type="text/javascript">
-
         var success = "{{ session('success') }}";
 
         $(document).ready(function () {
@@ -79,8 +78,5 @@
                 toastr.error('Record not found.');
             }
         });
-
-        var registerUrl = "{{ route('register') }}";
     </script>
-    <script src="{{ asset('/frontend/js/auth.js') }}"></script>
 @endsection

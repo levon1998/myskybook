@@ -19,7 +19,7 @@
                 </ol>
             </div>
             <div class="pull-right">
-                <a href="{{ url('/v1-admin/category/create') }}" class="btn btn-primary">Create</a>
+                <a href="{{ url('/v1-admin/categories/create') }}" class="btn btn-primary">Create</a>
             </div>
         </div>
     </div>
@@ -38,20 +38,20 @@
                 </tr>
                 </thead>
                 <tbody>
-                @forelse ($tags as $tag)
+                @forelse ($categories as $category)
                     <tr>
-                        <th scope="row">{{ $tag->id }}</th>
-                        <td>{{ $tag->name }}</td>
-                        <td>{{ $tag->slug }}</td>
-                        <td>{{ $tag->created_at }}</td>
+                        <th scope="row">{{ $category->id }}</th>
+                        <td>{{ $category->name }}</td>
+                        <td>{{ $category->slug }}</td>
+                        <td>{{ $category->created_at }}</td>
                         <td>
-                            <a href="{{ url('/v1-admin/tags/edit/'.$tag->id) }}" class="btn btn-sm btn-default"><i class="fa fa-pencil"></i></a>
-                            <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                            <a href="{{ url('/v1-admin/categories/edit/'.$category->id) }}" class="btn btn-sm btn-default"><i class="fa fa-pencil"></i></a>
+                            <a href="{{ url('/v1-admin/categories/delete/'.$category->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4"> Not Data available.</td>
+                        <td colspan="5"> Not Data available.</td>
                     </tr>
                 @endforelse
                 </tbody>
@@ -59,4 +59,24 @@
 
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        var success = "{{ session('success') }}";
+
+        $(document).ready(function () {
+            toastr.options = {
+                "progressBar": true,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": true,
+            };
+
+            if (success === "1") {
+                toastr.success('Success.');
+            } else if (success === "2") {
+                toastr.error('Record not found.');
+            }
+        });
+    </script>
 @endsection

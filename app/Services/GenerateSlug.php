@@ -9,10 +9,12 @@ use Illuminate\Support\Str;
  */
 class GenerateSlug
 {
+    private $id;
     private $model;
 
-    public function __construct($model)
+    public function __construct($model, $id = null)
     {
+        $this->id = $id;
         $this->model = $model;
     }
 
@@ -20,7 +22,12 @@ class GenerateSlug
     {
         $slug = Str::slug($name);
 
-        if ($this->model->where('slug', $slug)->exists()) {
+        $exists = $this->model->where('slug', $slug)
+            ->when($this->id, function ($q) {
+                $q->where('id', '!=', $this->id);
+            })->exists();
+
+        if ($exists) {
             if ($increment > 0) {
                 $minus1 = $increment-1;
                 $slug = str_replace('-'.$minus1, '', $slug);

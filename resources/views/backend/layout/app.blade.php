@@ -14,7 +14,9 @@
 
         <link href="{{ asset('/backend/css/animate.css') }}" rel="stylesheet">
         <link href="{{ asset('/backend/css/style.css') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('/frontend/css/toastr.min.css') }}" />
 
+        @yield('styles')
     </head>
 
     <body>
@@ -36,9 +38,10 @@
         <script src="{{ asset('/backend/js/jquery-3.1.1.min.js') }}"></script>
         <script src="{{ asset('/backend/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('/backend/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
-        <script src="{{ asset('/backend/js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
         <script src="{{ asset('/backend/js/inspinia.js') }}"></script>
         <script src="{{ asset('/backend/js/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('/frontend/js/toastr.min.js') }}"></script>
 
+        @yield('scripts')
     </body>
 </html>

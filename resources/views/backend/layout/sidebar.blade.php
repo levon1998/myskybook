@@ -19,14 +19,15 @@
             </li>
 
             <li class="{{ (request()->is('v1-admin/categories') || request()->is('v1-admin/categories/*')) ? 'active' : '' }}">
-                <a href="{{ url('/v1-admin/categories') }}"><i class="fa fa-tags"></i> <span class="nav-label">Categories</span></a>
+                <a href="{{ url('/v1-admin/categories') }}"><i class="fa fa-columns"></i> <span class="nav-label">Categories</span></a>
+            </li>
+
+            <li class="{{ (request()->is('v1-admin/books') || request()->is('v1-admin/books/*')) ? 'active' : '' }}">
+                <a href="{{ url('/v1-admin/books') }}"><i class="fa fa-book"></i> <span class="nav-label">Books</span></a>
             </li>
 
             <li>
                 <a href="/v1-admin/users"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav-label">Users</span></a>
-            </li>
-            <li>
-                <a href="/v1-admin/donates"><i class="fa fa-money" aria-hidden="true"></i> <span class="nav-label">Donates</span></a>
             </li>
             <li>
                 <a href="/v1-admin/plans"><i class="fa fa-question" aria-hidden="true"></i> <span class="nav-label">Plans</span></a>

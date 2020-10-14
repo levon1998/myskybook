@@ -11,4 +11,9 @@ class Tag extends Model
         'name',
         'slug'
     ];
+
+    public function books()
+    {
+        return $this->belongsToMany(Book::class);
+    }
 }

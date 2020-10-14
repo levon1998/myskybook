@@ -20,24 +20,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3">
-                    <nav class="category-nav white-nav  ">
-                        <div>
-                            <a href="javascript:void(0)" class="category-trigger"><i
-                                        class="fa fa-bars"></i>Browse
-                                categories</a>
-                            <ul class="category-menu">
-                                <li class="cat-item">
-                                    <a href="#">Arts & Photography</a>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">Biographies</a>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">Business & Money</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+                    @include('frontend.partials.headerCategory')
                 </div>
                 <div class="col-lg-3">
                     <div class="header-phone color-white">
@@ -85,24 +68,7 @@
                     </a>
                 </div>
                 <div class="col-md-5 order-3 order-md-2">
-                    <nav class="category-nav   ">
-                        <div>
-                            <a href="javascript:void(0)" class="category-trigger"><i
-                                        class="fa fa-bars"></i>Browse
-                                categories</a>
-                            <ul class="category-menu">
-                                <li class="cat-item">
-                                    <a href="#">Arts & Photography</a>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">Biographies</a>
-                                </li>
-                                <li class="cat-item">
-                                    <a href="#">Business & Money</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+                    @include('frontend.partials.headerCategory')
                 </div>
                 <div class="col-md-3 col-5  order-md-3 text-right">
                     <div class="mobile-header-btns header-top-widget">

@@ -2,10 +2,12 @@
 
 namespace App\Services;
 
+use App\Models\Category;
+
 class GetCategoriesService
 {
     public static function getCategories()
     {
-        // todo
+        return Category::orderBy('name')->get();
     }
 }

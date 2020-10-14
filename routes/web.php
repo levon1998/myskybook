@@ -40,6 +40,14 @@ Route::prefix('v1-admin')->group(function () {
     Route::post('/categories/update', "AdminCategoryController@update");
     Route::get('/categories/delete/{id}', "AdminCategoryController@delete");
 
+    // Categories
+    Route::get('/books', "AdminBookController@index");
+    Route::get('/books/create', "AdminBookController@create");
+    Route::post('/books/store', "AdminBookController@store");
+    Route::get('/books/edit/{id}', "AdminBookController@edit");
+    Route::post('/books/update', "AdminBookController@update");
+    Route::get('/books/delete/{id}', "AdminBookController@delete");
+
 });
 
 /**

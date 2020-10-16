@@ -15628,13 +15628,13 @@ input[type="number"] {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .product-card .hover-contents .hover-btns .single-btn {
+      .product-card .hover-contents .hover-btns .page-link {
         line-height: 47px;
         padding: 0 15.5px;
         border-right: 1px solid #e5e5e5; }
-        .product-card .hover-contents .hover-btns .single-btn:last-child {
+        .product-card .hover-contents .hover-btns .page-link:last-child {
           border-right: 0; }
-        .product-card .hover-contents .hover-btns .single-btn:hover {
+        .product-card .hover-contents .hover-btns .page-link:hover {
           color: #62ab00; }
   .product-card:hover .hover-contents {
     visibility: visible;
@@ -18899,7 +18899,7 @@ input[type="number"] {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  .pagination-block .pagination-btns {
+  .pagination-block .pagination {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18916,11 +18916,11 @@ input[type="number"] {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     @media (min-width: 480px) {
-      .pagination-block .pagination-btns {
+      .pagination-block .pagination {
         line-height: auto; } }
-    .pagination-block .pagination-btns li {
+    .pagination-block .pagination li {
       position: relative; }
-      .pagination-block .pagination-btns li::before {
+      .pagination-block .pagination li::before {
         content: "";
         border: 11px solid;
         border-color: transparent transparent #62ab00 transparent;
@@ -18931,11 +18931,11 @@ input[type="number"] {
         top: -22px;
         margin: auto;
         opacity: 0; }
-      .pagination-block .pagination-btns li.active::before {
+      .pagination-block .pagination li.active::before {
         opacity: 1; }
-      .pagination-block .pagination-btns li.active .single-btn:before, .pagination-block .pagination-btns li.active .single-btn:after {
+      .pagination-block .pagination li.active .page-link:before, .pagination-block .pagination li.active .page-link:after {
         opacity: 1; }
-    .pagination-block .pagination-btns .single-btn {
+    .pagination-block .pagination .page-link {
       color: #555;
       background: none;
       font-size: 16px;
@@ -18949,7 +18949,7 @@ input[type="number"] {
       line-height: 48px;
       position: relative;
       text-align: center; }
-      .pagination-block .pagination-btns .single-btn:before {
+      .pagination-block .pagination .page-link:before {
         content: "";
         top: -2px;
         bottom: -2px;
@@ -18960,7 +18960,7 @@ input[type="number"] {
         border-radius: 3px;
         -webkit-border-radius: 3px;
         opacity: 0; }
-      .pagination-block .pagination-btns .single-btn:after {
+      .pagination-block .pagination .page-link:after {
         content: "";
         border: 9px solid;
         border-color: transparent transparent #fff transparent;
@@ -18972,16 +18972,16 @@ input[type="number"] {
         margin: auto;
         z-index: 2;
         opacity: 0; }
-      .pagination-block .pagination-btns .single-btn:hover, .pagination-block .pagination-btns .single-btn.current {
+      .pagination-block .pagination .page-link:hover, .pagination-block .pagination .page-link.current {
         color: #62ab00; }
-      .pagination-block .pagination-btns .single-btn i {
+      .pagination-block .pagination .page-link i {
         font-size: 18px;
         position: relative;
         top: 2px;
         display: inline-block; }
-      .pagination-block .pagination-btns .single-btn.prev-btn i {
+      .pagination-block .pagination .page-link:first-child i {
         margin-right: 10px; }
-      .pagination-block .pagination-btns .single-btn.next-btn i {
+      .pagination-block .pagination .page-link:last-child i {
         margin-left: 10px; }
 
 /*List Vewing Toolbar*/

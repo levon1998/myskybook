@@ -4,7 +4,7 @@
         <ul class="category-menu">
             @foreach ($headerCategories as $category)
                 <li class="cat-item">
-                    <a href="{{ url('/category/'.$category->slug) }}">{{ $category->name }}</a>
+                    <a href="{{ url('/books/category/'.$category->slug) }}">{{ $category->name }}</a>
                 </li>
             @endforeach
         </ul>

@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/books', 'BookController@index')->name('books');
 Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
 
 

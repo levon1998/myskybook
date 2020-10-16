@@ -47,7 +47,7 @@ class AdminBookController extends Controller
         ]);
 
         if ($request->file('book_file')) {
-            $validatedData['filename'] = $request->file('book_file')->store('public/books');
+            $validatedData['filename'] = str_replace('public/books', '', $request->file('book_file')->store('public/books'));
         }
 
         $slugService = new GenerateSlug(new Book);
@@ -115,7 +115,7 @@ class AdminBookController extends Controller
         ];
 
         if ($request->file('book_file')) {
-            $update['filename'] = $request->file('book_file')->store('public/books');
+            $update['filename'] = str_replace('public/books', '', $request->file('book_file')->store('public/books'));
         }
 
         Book::where('id', $validatedData['id'])->update($update);

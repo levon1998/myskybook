@@ -36,7 +36,7 @@
                     <div class="main-navigation flex-lg-right">
                         <ul class="main-menu menu-right main-menu--white li-last-0">
                             <li class="menu-item">
-                                <a href="javascript:void(0)">
+                                <a href="{{ route('books') }}">
                                     <i class="fas fa-book"></i> Books
                                 </a>
                             </li>

@@ -19,7 +19,7 @@ class Book extends Model
 
     public function author()
     {
-        return $this->hasOne(Author::class);
+        return $this->hasOne(Author::class, 'id', 'author_id');
     }
 
     public function chapters()

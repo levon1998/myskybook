@@ -28,7 +28,7 @@ class AdminTagController extends Controller
             'name' => 'required|max:30'
         ]);
 
-        $slugService = new GenerateSlug(new Tag, $validatedData['id']);
+        $slugService = new GenerateSlug(new Tag);
         $slug = $slugService->generate($request->input('name'));
 
         Tag::create([
@@ -54,7 +54,7 @@ class AdminTagController extends Controller
             'name'  => 'required|max:30'
         ]);
 
-        $slugService = new GenerateSlug(new Tag);
+        $slugService = new GenerateSlug(new Tag, $validatedData['id']);
         $slug = $slugService->generate($request->input('name'));
 
         Tag::where('id', $validatedData['id'])->update([

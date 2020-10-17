@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Book extends Model
 {
@@ -35,5 +36,15 @@ class Book extends Model
     public function categories()
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function like()
+    {
+        return $this->hasOne(UserLikeBook::class)->where('user_id', Auth::id());
+    }
+
+    public function watchLater()
+    {
+        return $this->hasOne(UserWatchLaterBook::class)->where('user_id', Auth::id());
     }
 }

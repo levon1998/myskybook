@@ -489,8 +489,4 @@ jQuery(document).ready(function ($) {
        }
 
     });
-
-    $('#bookSorting').on('change', function () {
-        $(this).submit();
-    })
 });

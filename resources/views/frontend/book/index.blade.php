@@ -55,8 +55,8 @@
                                                 <p>{{ $book->short_description }}</p>
                                             </article>
                                             <div class="btn-block">
-                                                <a href="" class="card-link"><i class="fas fa-clock"></i> Watch Later</a>
-                                                <a href="" class="card-link"><i class="fas fa-thumbs-up"></i> Add To Favorite</a>
+                                                <button class="card-link addToFavorite {{ $book->like ? 'active-card-link ' : '' }}" {{ $book->like ? 'disabled' : '' }} data-book-id="{{ $book->id }}"><i class="fas fa-thumbs-up"></i> Add To Favorite</button>
+                                                <button class="card-link addToWatchLater {{ $book->watchLater  ? 'active-card-link' : '' }}" {{ $book->watchLater ? 'disabled' : '' }} data-book-id="{{ $book->id }}"><i class="fas fa-clock"></i> Watch Later</button>
                                             </div>
                                         </div>
                                     </div>
@@ -96,4 +96,7 @@
             </div>
         </div>
     </main>
+@endsection
+@section('scripts')
+    <script src="{{ asset('/frontend/js/books.js') }}"></script>
 @endsection

@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/books', 'BookController@index')->name('books');
+Route::post('/account-add-to-favorite', 'BookController@addToFavorite')->name('addToFavorite');
+Route::post('/account-add-to-watch-later', 'BookController@addToWatchLater')->name('addToWatchLater');
 Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
 
 

@@ -33,16 +33,43 @@
                             <div class="tab-content" id="myaccountContent">
                                 <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Dashboard</h3>
-                                        <div class="welcome mb-20">
-                                            <p>Hello, <strong>Alex Tuntuni</strong> (If Not <strong>Tuntuni
-                                                    !</strong><a href="login-register.html" class="logout">
-                                                    Logout</a>)</p>
+                                        <h3>Watch Later</h3>
+
+                                        <div class="col-lg-12 order-lg-2">
+                                            <div class="shop-product-wrap grid with-pagination row space-db--30 shop-border grid">
+                                                @foreach ($books as $book)
+                                                    @php($book = $book->book)
+                                                    <div class="col-sm-4 col-xs-12">
+                                                        <div class="product-card">
+                                                            <div class="product-grid-content">
+                                                                <div class="card-image">
+                                                                    <a href="{{ url('/book/'.$book->slug) }}" tabindex="0">
+                                                                        <img src="{{ asset('storage/books/'.$book->filename) }}"  alt="{{ $book->short_name }}">
+                                                                    </a>
+                                                                </div>
+                                                                <div class="product-card--body">
+                                                                    <div class="product-header">
+                                                                        <h3>
+                                                                            <a href="{{ url('/book/'.$book->slug) }}" tabindex="0">
+                                                                                {{ $book->short_name }}
+                                                                            </a>
+                                                                        </h3>
+
+                                                                        <a href="{{ url('/author/'.$book->author->id) }}" class="author">
+                                                                            {{ $book->author->name }}
+                                                                        </a>
+                                                                    </div>
+                                                                    <article>
+                                                                        <h2 class="sr-only">Card List Article</h2>
+                                                                        <p>{{ $book->short_description }}</p>
+                                                                    </article>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            </div>
                                         </div>
-                                        <p class="mb-0">From your account dashboard. you can easily check &amp; view
-                                            your
-                                            recent orders, manage your shipping and billing addresses and edit your
-                                            password and account details.</p>
                                     </div>
                                 </div>
                             </div>

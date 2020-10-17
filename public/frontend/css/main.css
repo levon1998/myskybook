@@ -15531,7 +15531,9 @@ input[type="number"] {
     .blog-card .card-link i {
       margin-left: 8px;
       color: #62ab00; }
-
+.active-card-link {
+  color: #62ab00 !important;
+}
 .blog-card.card-style-list .card-content .title {
   font-size: 18px;
   color: #333;

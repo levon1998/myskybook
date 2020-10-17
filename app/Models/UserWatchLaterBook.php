@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserLikeBook extends Model
+class UserWatchLaterBook extends Model
 {
-    protected $table = "user_like_book";
+    protected $table = "user_watch_later_book";
 
     public $timestamps = false;
 

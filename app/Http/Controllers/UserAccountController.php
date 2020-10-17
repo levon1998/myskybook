@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\UserLikeBook;
+use App\Models\UserWatchLaterBook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -23,14 +24,16 @@ class UserAccountController extends Controller
 
     public function watchLater()
     {
-        return view('frontend.account.watchLater');
+        $books = UserWatchLaterBook::where('user_id', Auth::id())->with('book')->get();
+
+        return view('frontend.account.watchLater', compact('books'));
     }
 
     public function favorites()
     {
-        $likes = UserLikeBook::where('user_id', Auth::id())->with('book')->get();
-        dd($likes);
-        return view('frontend.account.favorites');
+        $books = UserLikeBook::where('user_id', Auth::id())->with('book')->get();
+
+        return view('frontend.account.favorites', compact('books'));
     }
 
     public function accountSaveChanges(Request $request)

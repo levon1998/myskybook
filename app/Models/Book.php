@@ -47,4 +47,9 @@ class Book extends Model
     {
         return $this->hasOne(UserWatchLaterBook::class)->where('user_id', Auth::id());
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

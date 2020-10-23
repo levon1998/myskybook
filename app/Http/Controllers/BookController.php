@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Review;
 use App\Models\Tag;
 use App\Models\UserLikeBook;
 use App\Models\UserWatchLaterBook;
@@ -63,6 +64,32 @@ class BookController extends Controller
             'user_id' => Auth::id(),
             'book_id' => $validatedData['bookId']
         ]);
+
+        return response()->json('ok');
+    }
+
+    public function book($slug)
+    {
+        $book = Book::where('slug', $slug)->with(['tags', 'categories', 'author'])->firstOrFail();
+        $relatedBooks = Book::limit(5)->with('author')->get();
+        $reviews = Review::where('book_id', $book->id)->get();
+        $reviewAvg = (int)$reviews->avg('star');
+
+        return view('frontend.book.single', compact('book', 'relatedBooks', 'reviews', 'reviewAvg'));
+    }
+
+    public function review(Request $request)
+    {
+        $validatedData = $request->validate([
+            'bookId' => 'required|exists:books,id',
+            'comment' => 'required|string|min:10',
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'website' => 'nullable|string',
+            'star' => 'required|numeric'
+        ]);
+
+        Book::find($validatedData['bookId'])->reviews()->create($validatedData);
 
         return response()->json('ok');
     }

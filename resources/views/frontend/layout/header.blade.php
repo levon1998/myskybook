@@ -7,21 +7,26 @@
                         <img src="{{ asset('/frontend/image/logo.png') }}" alt="">
                     </a>
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-{{ Auth::check() ? '9' : '7' }}">
                     <div class="header-search-block">
                         <input type="text" placeholder="Search your dream book">
                         <button>Search</button>
                     </div>
                 </div>
+                @if (!Auth::check())
+                    <div class="col-lg-2 text-right">
+                        <div class="login-block">
+                            <a href="{{ route('login') }}" class="font-weight-bold">Login</a> <br>
+                            <span>or</span><a href="{{ route('login', ['sign-up' => 1]) }}">Register</a>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
     <div class="header-bottom bg-primary">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-3">
-                    @include('frontend.partials.headerCategory')
-                </div>
                 <div class="col-lg-3">
                     <div class="header-phone color-white">
                         <div class="icon">
@@ -32,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-9">
                     <div class="main-navigation flex-lg-right">
                         <ul class="main-menu menu-right main-menu--white li-last-0">
                             <li class="menu-item">
@@ -67,9 +72,7 @@
                         <img src="{{ asset('/frontend/image/logo.png') }}" alt="">
                     </a>
                 </div>
-                <div class="col-md-5 order-3 order-md-2">
-                    @include('frontend.partials.headerCategory')
-                </div>
+                <div class="col-md-5 order-3 order-md-2"></div>
                 <div class="col-md-3 col-5  order-md-3 text-right">
                     <div class="mobile-header-btns header-top-widget">
                         <ul class="header-links">
@@ -124,6 +127,15 @@
             <nav class="off-canvas-nav">
                 <ul class="mobile-menu menu-block-2">
                     @include('frontend.partials.headerAccountMenu')
+
+                    @if (!Auth::check())
+                        <div class="col-xs-12">
+                            <div class="login-block">
+                                <a href="{{ route('login') }}" class="font-weight-bold">Login</a>
+                                <span>or</span><a href="{{ route('login', ['sign-up' => 1]) }}">Register</a>
+                            </div>
+                        </div>
+                    @endif
                 </ul>
             </nav>
             <div class="off-canvas-bottom">
@@ -170,6 +182,7 @@
                         </li>
 
                         @include('frontend.partials.headerAccountMenu')
+
                     </ul>
                 </div>
             </div>

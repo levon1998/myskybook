@@ -96,7 +96,8 @@ class AdminBookController extends Controller
             'author_id'         => 'required',
             'book_file'         => 'nullable',
             'tags'              => 'required',
-            'categories'        => 'required'
+            'categories'        => 'required',
+            'chapters'          => 'nullable|array'
         ]);
 
         $slugService = new GenerateSlug(new Book, $validatedData['id']);
@@ -121,6 +122,10 @@ class AdminBookController extends Controller
         Book::where('id', $validatedData['id'])->update($update);
 
         $book = Book::find($validatedData['id']);
+
+        foreach ($validatedData['chapters'] as $chapter) {
+            $book->chapters()->create(['body' => $chapter]);
+        }
 
         $book->tags()->sync($validatedData['tags']);
         $book->categories()->sync($validatedData['categories']);

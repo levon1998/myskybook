@@ -12,10 +12,11 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('/books', 'BookController@index')->name('books');
 Route::get('/book/{slug}', 'BookController@book')->name('book');
 Route::post('/account-add-to-favorite', 'BookController@addToFavorite')->name('addToFavorite');
-Route::post('/account-add-to-watch-later', 'BookController@addToWatchLater')->name('addToWatchLater');
+Route::post('/account-adda-to-watch-later', 'BookController@addToWatchLater')->name('addToWatchLater');
 Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
 Route::post('/post-comment', 'BookController@review')->name('review');
 

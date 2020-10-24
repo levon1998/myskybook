@@ -55,6 +55,13 @@
                                 <a href="">({{ $reviews->count() }} Reviews)</a> <span>|</span>
                                 <a href="">Write a review</a>
                             </div>
+                            <br>
+                            <br>
+
+                            <div class="btn-block">
+                                <button class="card-link addToFavorite {{ $book->like ? 'active-card-link ' : '' }}" {{ $book->like ? 'disabled' : '' }} data-book-id="{{ $book->id }}"><i class="fas fa-thumbs-up"></i> Add To Favorite</button>
+                                <button class="card-link addToWatchLater {{ $book->watchLater  ? 'active-card-link' : '' }}" {{ $book->watchLater ? 'disabled' : '' }} data-book-id="{{ $book->id }}"><i class="fas fa-clock"></i> Watch Later</button>
+                            </div>
                         </div>
                         <article class="product-details-article">
                             <h4 class="sr-only">Product Summery</h4>

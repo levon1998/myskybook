@@ -54,6 +54,25 @@
                                                 <h2 class="sr-only">Card List Article</h2>
                                                 <p>{{ $book->short_description }}</p>
                                             </article>
+
+
+                                            <div class="rating-widget">
+                                                <div class="rating-block">
+                                                    @php ($avg = $book->reviews()->avg('star'))
+                                                    @for($i = 0; $i < $avg; $i++)
+                                                        <span class="fas fa-star star_on"></span>
+                                                    @endfor
+
+                                                    @for($i = 0; $i < 5 - $avg; $i++)
+                                                        <span class="fas fa-star"></span>
+                                                    @endfor
+                                                </div>
+
+                                                <div class="review-widget">
+                                                    <a href="">({{ $book->reviews()->count() }} Reviews)</a>
+                                                </div>
+                                            </div>
+
                                             <div class="btn-block">
                                                 <button class="card-link addToFavorite {{ $book->like ? 'active-card-link ' : '' }}" {{ $book->like ? 'disabled' : '' }} data-book-id="{{ $book->id }}"><i class="fas fa-thumbs-up"></i> Add To Favorite</button>
                                                 <button class="card-link addToWatchLater {{ $book->watchLater  ? 'active-card-link' : '' }}" {{ $book->watchLater ? 'disabled' : '' }} data-book-id="{{ $book->id }}"><i class="fas fa-clock"></i> Watch Later</button>

@@ -7,6 +7,7 @@
 @section('styles')
     <link href="{{ asset('/backend/css/plugins/jasny/jasny-bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/backend/css/plugins/select2/select2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/backend/css/plugins/ckeditor/styles.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -36,6 +37,8 @@
         <div class="ibox-content">
             <form action="{{ url("/v1-admin/books/{$mode}") }}" method="post" enctype="multipart/form-data" class="mt--25">
                 {{ csrf_field() }}
+                <h2 align="center">Book Info</h2>
+                <hr>
 
                 <div class="form-group  row">
                     <label class="col-sm-2 col-form-label">Name</label>
@@ -138,11 +141,34 @@
                 @if ($mode == 'update')
                     <input type="hidden" name="id" value="{{ $book->id }}">
                 @endif
+
+                <h2 align="center">Chapters
+                    <button class="btn btn-sm btn-primary chapterAdd"><i class="fa fa-plus"></i></button>
+                </h2>
+                <hr>
+
+                <div class="chapters">
+                    @if ($mode == 'update')
+                        @foreach ($book->chapters as $key => $chapter)
+                            <br><div class="chapterClass">
+                                <textarea name="chapters[]" class="chapter" id="chapter{{ $key+1 }}">{{ $chapter->body }}</textarea><br>
+                                <button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>
+                            </div>
+                        @endforeach
+                    @else
+                        <br><div class="chapterClass">
+                            <textarea name="chapters[]" class="chapter" id="chapter1"></textarea><br>
+                            <button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>
+                        </div>
+                    @endif
+                </div>
+                <hr>
+
+                <br>
                 <div class="form-group pull-right">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
-            </form>
-        </div>
+        </form>
     </div>
 @endsection
 
@@ -150,6 +176,7 @@
 
     <script src="{{ asset('/backend/js/plugins/jasny/jasny-bootstrap.min.js') }}"></script>
     <script src="{{ asset('/backend/js/plugins/select2/select2.full.min.js') }}"></script>
+    <script src="{{ asset('/backend/js/plugins/ckeditor/ckeditor.js') }}"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -157,6 +184,33 @@
             $(".authorSelect2").select2({
                 tags: true
             });
+
+            for (var i = 1; i < $('.chapterClass').length+1; i++) {
+                CKEDITOR.replace( 'chapter'+i );
+            }
+
+
+            $('.chapterAdd').on('click', function (e) {
+                e.preventDefault();
+                var length = $('.chapterClass').length + 1;
+                $('.chapters').append('' +
+                    '<br><div class="chapterClass">\n' +
+                    '<textarea name="chapters[]" class="chapter" id="chapter'+length+'"></textarea><br>\n' +
+                    '<button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>\n' +
+                    '</div>');
+
+
+                CKEDITOR.replace( 'chapter'+length );
+            });
+
+            $(document).on('click', '.chapterDelete', function (e) {
+                e.preventDefault();
+                console.log($(this).closest('.chapterClass'));
+                $(this).closest('.chapterClass').remove();
+            });
         });
+
+
+
     </script>
 @endsection

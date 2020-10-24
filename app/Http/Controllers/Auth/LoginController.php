@@ -51,7 +51,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return redirect($this->redirectTo);
+        return view('frontend.auth.login');
     }
 
 

@@ -16,7 +16,7 @@ class CreateBookChaptersTable extends Migration
         Schema::create('book_chapters', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('book_id');
-            $table->string('header');
+            $table->string('header')->nullable();
             $table->longText('body');
             $table->timestamps();
         });

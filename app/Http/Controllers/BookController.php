@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Category;
 use App\Models\Review;
 use App\Models\Tag;
 use App\Models\UserLikeBook;
@@ -92,5 +93,52 @@ class BookController extends Controller
         Book::find($validatedData['bookId'])->reviews()->create($validatedData);
 
         return response()->json('ok');
+    }
+
+    public function byCategory($slug, Request $request)
+    {
+        $category = Category::select('id')->where('slug', $slug)->first();
+        $tags = Tag::orderBy('name')->with('books')->get();
+        $books = Book::select('books.id', 'slug', 'short_name', 'short_description', 'filename', 'author_id')
+            ->when(!empty($request->input('sort')), function ($q) use ($request) {
+                if ($request->input('sort') == 'a-z') {
+                    $q->orderBy('short_name');
+                } elseif ($request->input('sort') == 'z-a') {
+                    $q->orderBy('short_name', 'desc');
+                } elseif ($request->input('sort') == 'high') {
+                    $q->orderBy('name', 'asc');
+                } elseif ($request->input('sort') == 'low') {
+                    $q->orderBy('name', 'desc');
+                }
+            })
+            ->join('book_category', 'book_category.book_id', '=', 'books.id')
+            ->where('book_category.category_id', $category->id)
+            ->with(['author', 'categories', 'like', 'watchLater'])->paginate(10);
+
+        return view('frontend.book.index', compact('tags', 'books'));
+    }
+
+    public function byTag($slug, Request $request)
+    {
+        $tag = Tag::select('id')->where('slug', $slug)->first();
+        $tags = Tag::orderBy('name')->with('books')->get();
+        $books = Book::select('books.id', 'slug', 'short_name', 'short_description', 'filename', 'author_id')
+            ->when(!empty($request->input('sort')), function ($q) use ($request) {
+                if ($request->input('sort') == 'a-z') {
+                    $q->orderBy('short_name');
+                } elseif ($request->input('sort') == 'z-a') {
+                    $q->orderBy('short_name', 'desc');
+                } elseif ($request->input('sort') == 'high') {
+                    $q->orderBy('name', 'asc');
+                } elseif ($request->input('sort') == 'low') {
+                    $q->orderBy('name', 'desc');
+                }
+            })
+            ->join('book_tag', 'book_tag.book_id', '=', 'books.id')
+            ->where('book_tag.tag_id', $tag->id)
+            ->with(['author', 'categories', 'like', 'watchLater'])
+            ->paginate(10);
+
+        return view('frontend.book.index', compact('tags', 'books'));
     }
 }

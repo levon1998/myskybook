@@ -10,6 +10,7 @@ use App\Models\UserLikeBook;
 use App\Models\UserWatchLaterBook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
@@ -140,5 +141,14 @@ class BookController extends Controller
             ->paginate(10);
 
         return view('frontend.book.index', compact('tags', 'books'));
+    }
+
+    public function bookRead($slug)
+    {
+        $book = Book::where('slug', $slug)->with(['chapters'])->firstOrFail();
+
+        $files = Storage::disk('s3')->allFiles("{$slug}/");
+
+        return view('frontend.book.read', compact('book', 'files'));
     }
 }

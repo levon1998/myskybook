@@ -189,7 +189,6 @@
                 CKEDITOR.replace( 'chapter'+i );
             }
 
-
             $('.chapterAdd').on('click', function (e) {
                 e.preventDefault();
                 var length = $('.chapterClass').length + 1;

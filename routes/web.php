@@ -24,6 +24,7 @@ Route::get('/books', 'BookController@index')->name('books');
 Route::get('/books/category/{slug}', 'BookController@byCategory')->name('byCategory');
 Route::get('/books/tag/{slug}', 'BookController@byTag')->name('byTag');
 Route::get('/book/{slug}', 'BookController@book')->name('book');
+Route::get('/book/{slug}/read', 'BookController@bookRead')->name('bookRead');
 Route::post('/account-add-to-favorite', 'BookController@addToFavorite')->name('addToFavorite');
 Route::post('/account-adda-to-watch-later', 'BookController@addToWatchLater')->name('addToWatchLater');
 Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');

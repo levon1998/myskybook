@@ -69,7 +69,7 @@
                         </article>
                         <div class="add-to-cart-row">
                             <div class="add-cart-btn">
-                                <a href="" class="btn btn-outlined--primary">Read Online</a>
+                                <a href="{{ route('bookRead', [$book->slug]) }}" class="btn btn-outlined--primary">Read Online</a>
                             </div>
                         </div>
                     </div>

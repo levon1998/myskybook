@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Validation\Validator;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('frontend.home.index');
+        $books = Book::with('author')->orderBy('id', 'desc')->get();
+
+        return view('frontend.home.index', compact('books'));
     }
 
     public function subscribe(Request $request)

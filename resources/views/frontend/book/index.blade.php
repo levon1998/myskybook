@@ -29,7 +29,7 @@
                         @include('frontend.partials.bookHeader')
                     </div>
                     <div class="shop-product-wrap with-pagination row space-db--30 shop-border list">
-                        @foreach ($books as $book)
+                        @forelse ($books as $book)
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-card card-style-list">
                                     <div class="product-list-content">
@@ -81,7 +81,11 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @empty
+                            <div class="col-12">
+                                <p align="center">No available data.</p>
+                            </div>
+                        @endforelse
                     </div>
 
                     <div class="row pt--30">
@@ -96,9 +100,9 @@
                     <div class="inner-page-sidebar">
                         <div class="single-block">
                             <h3 class="sidebar-title">Categories</h3>
-                            <ul class="sidebar-menu--shop">
+                            <ul class="sidebar-menu--shop menu-type-2">
                                 @foreach ($headerCategories as $category)
-                                    <li><a href="{{ url('/books/category/'.$category->slug) }}">{{ $category->name }}</a></li>
+                                    <li><a href="{{ url('/books/category/'.$category->slug) }}">{{ $category->name }} <span>{{ $category->books()->count() }}</span></a></li>
                                 @endforeach
                             </ul>
                         </div>

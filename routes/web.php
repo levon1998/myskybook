@@ -26,7 +26,7 @@ Route::get('/books/tag/{slug}', 'BookController@byTag')->name('byTag');
 Route::get('/book/{slug}', 'BookController@book')->name('book');
 Route::get('/book/{slug}/read', 'BookController@bookRead')->name('bookRead');
 Route::post('/account-add-to-favorite', 'BookController@addToFavorite')->name('addToFavorite');
-Route::post('/account-adda-to-watch-later', 'BookController@addToWatchLater')->name('addToWatchLater');
+Route::post('/account-add-to-watch-later', 'BookController@addToWatchLater')->name('addToWatchLater');
 Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
 Route::post('/post-comment', 'BookController@review')->name('review');
 
@@ -36,9 +36,12 @@ Auth::routes(['verify' => true]);
 /**
  * Admin Url For not authenticated users
  */
-Route::prefix('v1-admin')->group(function () {
+Route::prefix('v1-admin')->middleware('checkAdmin')->group(function () {
     Route::get('login', "AdminAuthController@login");
     Route::post('login', "AdminAuthController@authUser");
+
+    // Admin Home
+    Route::get('/', "AdminDashboardController@index");
 
     // Tags
     Route::get('/tags', "AdminTagController@index");
@@ -64,15 +67,15 @@ Route::prefix('v1-admin')->group(function () {
     Route::post('/books/update', "AdminBookController@update");
     Route::get('/books/delete/{id}', "AdminBookController@delete");
 
+    // Users
+    Route::get('/users', "AdminUserController@index");
+
 });
 
 /**
  * Admin Url For authenticated users
  */
 Route::prefix('v1-admin')->middleware('checkAdmin')->group(function () {
-    Route::get('/', "AdminDashboardController@index");
-    Route::get('/users', "AdminUserController@index");
-    Route::get('/donates', "AdminDonateController@index");
     Route::get('/plans', "AdminPlanController@index");
     Route::get('/reports', "AdminReportController@index");
 });

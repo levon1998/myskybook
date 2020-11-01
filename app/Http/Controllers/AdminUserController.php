@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminUserController extends Controller
 {
     public function index()
     {
-        return view('backend.user.index');
+        $users = User::where('role', User::USER)->orderBy('id', 'desc')->get();
+
+        return view('backend.user.index', compact('users'));
     }
 }

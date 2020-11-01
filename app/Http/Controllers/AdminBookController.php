@@ -92,7 +92,7 @@ class AdminBookController extends Controller
             'name'              => 'required|max:255',
             'short_name'        => 'required|max:255',
             'description'       => 'required|max:5000',
-            'short_description' => 'required|max:255',
+            'short_description' => 'required|max:500',
             'author_id'         => 'required',
             'book_file'         => 'nullable',
             'tags'              => 'required',

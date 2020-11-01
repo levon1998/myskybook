@@ -19,7 +19,7 @@
                                 <div class="row no-gutters ">
                                     <div class="col-xl-6 col-md-6 col-sm-7">
                                         <div class="home-content-inner content-left-side">
-                                            <h1>{{ $books[$i]->author->name }}</h1>
+                                            <h1>{{ $books[$i]->name }}</h1>
                                             <h6>{{ $books[$i]->short_description }}</h6>
                                             <a href="{{ route('bookRead', $books[$i]->slug) }}" class="btn btn-outlined--primary" style="margin-bottom: 30px;">
                                                 Read online
@@ -1653,7 +1653,7 @@
                                 </div>
                                 <div class="price-block">
                                     <a href="{{ url('/author/'.$book->author->id) }}" class="author">
-                                        {{ $book->author->name }}
+                                        By {{ $book->author->name }}
                                     </a>
                                 </div>
                                 <div class="count-down-block">

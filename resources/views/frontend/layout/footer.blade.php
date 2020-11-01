@@ -32,7 +32,7 @@
                     <ul class="footer-list normal-list">
                         <li><a href="{{ route('about') }}">About Us</a></li>
                         <li><a href="{{ route('books') }}">Books</a></li>
-                        <li><a href="{{ route('price') }}">Price</a></li>s
+                        <li><a href="{{ route('price') }}">Price</a></li>
                     </ul>
                 </div>
             </div>

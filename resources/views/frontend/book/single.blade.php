@@ -36,7 +36,7 @@
                     <div class="product-details-info pl-lg--30 ">
                         <h1 class="product-title">Beats EP Wired On-Ear Headphone-Black</h1>
                         <ul class="list-unstyled">
-                            <li>Author: <a href="{{ url('/author/'.$book->author->id) }}" class="list-value font-weight-bold"> {{ $book->author->name }}</a></li>
+                            <li>Author: <a href="{{ url('/author/'.$book->author->id) }}" class="list-value font-weight-bold">By {{ $book->author->name }}</a></li>
                         </ul>
                         <p class="tag-block">Tags: @foreach($book->tags as $tag) <a href="{{ url('/books/tag/'.$tag->slug) }}">{{ $tag->name }}</a> @endforeach</p>
                         <p class="tag-block">Categories: @foreach($book->categories as $category) <a href="{{ url('/books/category/'.$category->slug) }}">{{ $category->name }}</a> @endforeach</p>

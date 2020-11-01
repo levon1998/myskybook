@@ -45,7 +45,7 @@
                                                 </h3>
 
                                                 <a href="{{ url('/author/'.$book->author->id) }}" class="author">
-                                                    {{ $book->author->name }}
+                                                    By {{ $book->author->name }}
                                                 </a>
                                             </div>
                                             <article>

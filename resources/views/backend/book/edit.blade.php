@@ -142,27 +142,27 @@
                     <input type="hidden" name="id" value="{{ $book->id }}">
                 @endif
 
-                <h2 align="center">Chapters
-                    <button class="btn btn-sm btn-primary chapterAdd"><i class="fa fa-plus"></i></button>
-                </h2>
-                <hr>
+                {{--<h2 align="center">Chapters--}}
+                    {{--<button class="btn btn-sm btn-primary chapterAdd"><i class="fa fa-plus"></i></button>--}}
+                {{--</h2>--}}
+                {{--<hr>--}}
 
-                <div class="chapters">
-                    @if ($mode == 'update')
-                        @foreach ($book->chapters as $key => $chapter)
-                            <br><div class="chapterClass">
-                                <textarea name="chapters[]" class="chapter" id="chapter{{ $key+1 }}">{{ $chapter->body }}</textarea><br>
-                                <button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>
-                            </div>
-                        @endforeach
-                    @else
-                        <br><div class="chapterClass">
-                            <textarea name="chapters[]" class="chapter" id="chapter1"></textarea><br>
-                            <button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>
-                        </div>
-                    @endif
-                </div>
-                <hr>
+                {{--<div class="chapters">--}}
+                    {{--@if ($mode == 'update')--}}
+                        {{--@foreach ($book->chapters as $key => $chapter)--}}
+                            {{--<br><div class="chapterClass">--}}
+                                {{--<textarea name="chapters[]" class="chapter" id="chapter{{ $key+1 }}">{{ $chapter->body }}</textarea><br>--}}
+                                {{--<button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>--}}
+                            {{--</div>--}}
+                        {{--@endforeach--}}
+                    {{--@else--}}
+                        {{--<br><div class="chapterClass">--}}
+                            {{--<textarea name="chapters[]" class="chapter" id="chapter1"></textarea><br>--}}
+                            {{--<button class="btn btn-sm btn-danger chapterDelete mt--5"><i class="fa fa-minus"></i></button><br>--}}
+                        {{--</div>--}}
+                    {{--@endif--}}
+                {{--</div>--}}
+                {{--<hr>--}}
 
                 <br>
                 <div class="form-group pull-right">

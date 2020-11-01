@@ -49,12 +49,12 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="javascript:void(0)">
+                                <a href="{{ route('about') }}">
                                     About
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="javascript:void(0)">
+                                <a href="{{ route('price') }}">
                                     Price
                                 </a>
                             </li>
@@ -110,17 +110,17 @@
                 <nav class="off-canvas-nav">
                     <ul class="mobile-menu main-mobile-menu">
                         <li class="menu-item">
-                            <a href="javascript:void(0)">
+                            <a href="{{ route('books') }}">
                                 Books
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="javascript:void(0)">
+                            <a href="{{ route('about') }}">
                                 About
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="javascript:void(0)">
+                            <a href="{{ route('price') }}">
                                 Price
                             </a>
                         </li>
@@ -169,17 +169,17 @@
                 <div class="main-navigation flex-lg-right">
                     <ul class="main-menu menu-right ">
                         <li class="menu-item">
-                            <a href="javascript:void(0)">
+                            <a href="{{ route('books') }}">
                                 <i class="fas fa-book"></i> Books
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="javascript:void(0)">
+                            <a href="{{ route('about') }}">
                                 About
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="javascript:void(0)">
+                            <a href="{{ route('price') }}">
                                 Price
                             </a>
                         </li>

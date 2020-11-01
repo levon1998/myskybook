@@ -9,8 +9,11 @@
                 </div>
                 <div class="col-lg-{{ Auth::check() ? '9' : '7' }}">
                     <div class="header-search-block">
-                        <input type="text" placeholder="Search your dream book">
-                        <button>Search</button>
+                        <form action="{{ route('books') }}">
+                            <input type="text" name="search" value="{{ app('request')->input('search') }}" placeholder="Search your dream book">
+                            <input type="hidden" name="sort" value="{{ app('request')->input('sort') }}">
+                            <button type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
                 @if (!Auth::check())

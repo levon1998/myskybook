@@ -123,9 +123,9 @@ class AdminBookController extends Controller
 
         $book = Book::find($validatedData['id']);
 
-        foreach ($validatedData['chapters'] as $chapter) {
-            $book->chapters()->create(['body' => $chapter]);
-        }
+//        foreach ($validatedData['chapters'] as $chapter) {
+//            $book->chapters()->create(['body' => $chapter]);
+//        }
 
         $book->tags()->sync($validatedData['tags']);
         $book->categories()->sync($validatedData['categories']);

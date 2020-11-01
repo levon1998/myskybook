@@ -114,7 +114,7 @@ class AdminBookController extends Controller
             'short_description' => $validatedData['short_description'],
             'author_id' => $validatedData['author_id']
         ];
-        dd($request->all());
+
         if ($request->file('book_file')) {
             $update['filename'] = str_replace('public/books', '', $request->file('book_file')->store('public/books'));
         }
